@@ -74,7 +74,7 @@ nav .sub-button:hover {
 }
 
 .intro {
-    background: linear-gradient(#efefef, #713939);
+    background: linear-gradient(#d0c2a7, #e3ded8);
     padding: 30px 20px;
     border-radius: 20px;
     max-width: 1000px;
@@ -100,7 +100,7 @@ nav .sub-button:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 12px 0;
-    background: linear-gradient(#e0cece, #95e1ef);
+    background: linear-gradient(#aeaeae, #e2e2e2);
     border-radius: 30px;
     margin: 50px;
 }
@@ -136,7 +136,7 @@ nav .sub-button:hover {
 }
 
 .card.shop {
-    background: linear-gradient(#437847, #20211e);
+    background: linear-gradient(#282828, #404040);
 }
 
 .card.contacte {
