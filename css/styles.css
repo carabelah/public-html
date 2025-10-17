@@ -53,6 +53,25 @@ nav .menu li a:hover {
     color: #f39c12;
 }
 
+.sub-button{
+    background-color: #b73701;
+    border: none;
+    color: #fff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav .sub-button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
 .intro {
     background: linear-gradient(#efefef, #713939);
     padding: 30px 20px;
@@ -65,15 +84,16 @@ nav .menu li a:hover {
     text-align: center;
 }
 
-main h2 {
+.departaments {
     text-align: center;
-    font-size: 28px;
+    font-size: 18px;
     color: #222;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 12px 0;
     background: linear-gradient(#e0cece, #95e1ef);
     border-radius: 30px;
+    margin: 50px;
 }
 
 .subtitle {
