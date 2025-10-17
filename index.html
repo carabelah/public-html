@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <img src="img/ctrl1.png" width="250" height="250" alt="CTRL&PIXEL" class="logo">
+        <img src="img/ctrl1.png" alt="CTRL&PIXEL" class="logo">
     </header>
 
     <nav>
@@ -17,19 +17,27 @@
             <li><a href="#coaching">Coaching</a></li>
             <li><a href="#shop">Shop</a></li>
             <li><a href="#contacte">Contacte</a></li>
+            <li><a href="#subscripcio">Subscriu-te</a></li>
         </ul>
     </nav>
 
     <section class="intro">
-        <h2>Tecnologia i Modding</h2>
-        <p>Benvinguts a CTRL&PIXEL, el vostre lloc de referència per a tot el relacionat amb la tecnologia i el modding. Aquí trobareu tutorials, ressenyes de productes, i les últimes novetats en el món de la tecnologia.</p>
+        <h2>CTRL&PIXEL.</h2>
+        <p>
+            Benvinguts a <strong>CTRL&PIXEL</strong>, el vostre lloc de referència per a tot el relacionat amb la millor tecnologia.  
+            Aquí trobareu serveis especialitzats en modding, coaching tecnològic i una botiga amb els millors components i perifèrics del mercat.
+        </p>
     </section>
 
     <main class="departaments">
         <h2>Departaments</h2>
+        <p class="subtitle">Explora tots els nostres departaments i descobreix tot el que oferim</p>
 
         <section id="modding" class="card modding">
+        <div class="title-modding">
             <h3>Modding</h3>
+            <img src="/img/cpu.svg" class="modding" width="24" height="24" alt="">
+        </div>
             <ul>
                 <li>Personalització de PC i hardware</li>
                 <li>Guies d'assemblatge i optimització</li>
@@ -38,7 +46,10 @@
         </section>
 
         <section id="coaching" class="card coaching">
+        <div class="title-coach">
             <h3>Coaching</h3>
+            <img src="/img/coach.svg" class="coach" width="24" height="24" alt="">
+        </div>
             <ul>
                 <li>Assessorament en tecnologia i projectes</li>
                 <li>Sessions de formació personalitzada</li>
@@ -47,7 +58,10 @@
         </section>
 
         <section id="shop" class="card shop">
+        <div class="title-shop">
             <h3>Shop</h3>
+            <img src="/img/pc.svg" class="pc" width="24" height="24" alt="">
+        </div>
             <ul>
                 <li>Venda de components i perifèrics</li>
                 <li>Ofertes i packs especials</li>
@@ -56,15 +70,29 @@
         </section>
 
         <section id="contacte" class="card contacte">
-            <h3>Contacte</h3>
-            <form>
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Telèfon">
-                <textarea placeholder="Missatge" required></textarea>
-                <button type="submit">Enviar</button>
-                <button type="reset">Netejar</button>
-            </form>
+    <div class="title-contacte">
+        <h3>Contacte</h3>
+        <img src="/img/phone.svg" class="phone" width="24" height="24" alt="">
+    </div>
+    <form>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telèfon">
+        <textarea placeholder="Missatge" required></textarea>
+        <div class="form-buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Netejar</button>
+        </div>
+    </form>
+        </section>
+
+        <section id="subscripcio" class="card subscripcio">
+            <div class="title-vip">
+                <h3>Subscriu-te!</h3>
+                <img src="/img/vip.svg" class="vip" width="24" height="24" alt="">
+            </div>
+            <p>Per només <strong>24,99 € al mes</strong>, aconsegueix descomptes exclusius i avantatges únics a tots els nostres departaments.</p>
+            <button class="btn-sub">Subscriu-me ara</button>
         </section>
     </main>
 
