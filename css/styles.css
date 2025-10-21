@@ -18,10 +18,10 @@ header {
 
 header img.logo {
     width: auto;
-    height: 250px;
+    height: 350px;
     max-width: 85%;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 0px;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -58,10 +58,7 @@ nav .menu li a:hover {
     background-color: #b73701;
     border: none;
     color: #fff;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 2px 8px;
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
@@ -73,24 +70,36 @@ nav .sub-button:hover {
     color: black;
 }
 
-.intro {
-    background: linear-gradient(#d0c2a7, #e3ded8);
-    padding: 30px 20px;
-    border-radius: 20px;
+.intro,
+.card.contacte,
+.card.subscripcio {
     max-width: 1000px;
     margin: 30px auto;
-    color: #000;
-    font-style: italic;
-    font-size: 18px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.intro h2 {
     text-align: center;
 }
 
-@media (max-width: 1060px) {
-    .intro {
-        font-size: 16px;
-        padding: 20px 15px;
-        margin: 40px;
-    }
+.intro p {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.card-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    background: linear-gradient(#baafd2, #b1ad94);
+    border-radius: 50px;
+    margin: 5px 5px;
 }
 
 .departaments {
@@ -102,7 +111,7 @@ nav .sub-button:hover {
     padding: 12px 0;
     background: linear-gradient(#aeaeae, #e2e2e2);
     border-radius: 30px;
-    margin: 50px;
+    margin: 50px 20px;
 }
 
 .subtitle {
@@ -112,35 +121,75 @@ nav .sub-button:hover {
     margin-bottom: 20px;
 }
 
-.card {
-    padding: 25px;
-    margin: 25px auto;
+.departament-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card.modding,
+.card.coaching,
+.card.shop {
+    flex: 0 0 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    color: #fff;
-    max-width: 900px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
+.card.modding:hover,
+.card.coaching:hover,
+.card.shop:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .card.modding {
-    background: linear-gradient(#3549ba, #20211e);
+    background: linear-gradient(#d2d6eb, #5d5f5b);
 }
 
 .card.coaching {
-    background: linear-gradient(#e2bd6d, #20211e);
+    background: linear-gradient(#d3ccbe, #696a67);
 }
 
 .card.shop {
-    background: linear-gradient(#282828, #404040);
+    background: linear-gradient(#e0e0e0, #7e7e7e);
 }
 
 .card.contacte {
     background-color: #718395;
+    padding: 15px 20px;
+}
+
+.card.subscripcio {
+    background: linear-gradient(#e6e6e6, #444);
+    text-align: center;
+    padding: 40px 25px;
+
+}
+
+.btn-sub {
+    background-color: #f39c12;
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-sub:hover {
+    background-color: #e68a00;
 }
 
 form {
@@ -182,34 +231,21 @@ form button:hover {
     background-color: #f39c12;
 }
 
-.card.subscripcio {
-    background: linear-gradient(#1c1c1c, #444);
-    text-align: center;
-    padding: 40px 25px;
-}
-
-.btn-sub {
-    background-color: #f39c12;
-    border: none;
-    color: #fff;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-.btn-sub:hover {
-    background-color: #e68a00;
-}
-
 footer {
     background-color: #222;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+@media (max-width: 1060px) {
+    .intro,
+    .card.contacte,
+    .card.subscripcio,
+    .departaments {
+        margin: 30px 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -222,12 +258,9 @@ footer {
         align-items: center;
     }
 
-    .card {
-        padding: 20px;
-    }
-
-    form input, form textarea {
-        width: 90%;
+    .departament-cards {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -246,48 +279,39 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+    text-align: center;
+    justify-content: center;
 
-.title-contacte h3 {
-    margin: 0;
-}
-
-.title-shop {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.title-shop h3 {
-    margin: 0;
-}
-
-.title-coach {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.title-coach h3 {
-    margin: 0;
-}
-
-.title-modding {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.title-modding h3 {
-    margin: 0;
 }
 
 .title-vip {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-align: center;
+    justify-content: center;
 }
 
-.title-vip h3 {
-    margin: 0;
+.title-modding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-coach {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-shop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
 }
